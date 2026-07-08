@@ -59,7 +59,7 @@ export const sidebarData: SidebarData = {
           icon: LayoutDashboard,
         },
         {
-          title: 'AI Cost Dashboard',
+          title: 'AI Cost Dashboard!!!',
           url: '/ai-cost',
           icon: DollarSign,
           badge: 'P0',
