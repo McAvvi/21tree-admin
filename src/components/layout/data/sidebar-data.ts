@@ -78,6 +78,13 @@ export const sidebarData: SidebarData = {
           icon: BarChart3,
           badge: 'new',
         },
+
+        {
+          title: 'User management', // <-- NEW ITEM
+          url: '/user-management',
+          icon: BarChart3,
+          badge: 'new',
+        },
         {
           title: 'Tasks',
           url: '/tasks',
