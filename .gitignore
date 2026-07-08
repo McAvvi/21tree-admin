@@ -38,3 +38,6 @@ htmlcov/
 Thumbs.db
 # Original rules preserved
 *.log
+
+
+/src/docs
