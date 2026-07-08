@@ -21,6 +21,7 @@ import {
   AudioWaveform,
   Command,
   GalleryVerticalEnd,
+  DollarSign,
 } from 'lucide-react'
 import { ClerkLogo } from '@/assets/clerk-logo'
 import { type SidebarData } from '../types'
@@ -56,6 +57,12 @@ export const sidebarData: SidebarData = {
           title: 'Dashboard',
           url: '/',
           icon: LayoutDashboard,
+        },
+        {
+          title: 'AI Cost Dashboard',
+          url: '/ai-cost',
+          icon: DollarSign,
+          badge: 'P0',
         },
         {
           title: 'Tasks',
