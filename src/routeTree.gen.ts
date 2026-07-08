@@ -28,6 +28,7 @@ import { Route as AuthenticatedSettingsRouteRouteImport } from './routes/_authen
 import { Route as AuthenticatedUsersIndexRouteImport } from './routes/_authenticated/users/index'
 import { Route as AuthenticatedUserManagementIndexRouteImport } from './routes/_authenticated/user-management/index'
 import { Route as AuthenticatedTasksIndexRouteImport } from './routes/_authenticated/tasks/index'
+import { Route as AuthenticatedSystemAnouncementsIndexRouteImport } from './routes/_authenticated/system-anouncements/index'
 import { Route as AuthenticatedSettingsIndexRouteImport } from './routes/_authenticated/settings/index'
 import { Route as AuthenticatedHelpCenterIndexRouteImport } from './routes/_authenticated/help-center/index'
 import { Route as AuthenticatedContentIndexRouteImport } from './routes/_authenticated/content/index'
@@ -139,6 +140,12 @@ const AuthenticatedTasksIndexRoute = AuthenticatedTasksIndexRouteImport.update({
   path: '/tasks/',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedSystemAnouncementsIndexRoute =
+  AuthenticatedSystemAnouncementsIndexRouteImport.update({
+    id: '/system-anouncements/',
+    path: '/system-anouncements/',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const AuthenticatedSettingsIndexRoute =
   AuthenticatedSettingsIndexRouteImport.update({
     id: '/',
@@ -262,6 +269,7 @@ export interface FileRoutesByFullPath {
   '/content/': typeof AuthenticatedContentIndexRoute
   '/help-center/': typeof AuthenticatedHelpCenterIndexRoute
   '/settings/': typeof AuthenticatedSettingsIndexRoute
+  '/system-anouncements/': typeof AuthenticatedSystemAnouncementsIndexRoute
   '/tasks/': typeof AuthenticatedTasksIndexRoute
   '/user-management/': typeof AuthenticatedUserManagementIndexRoute
   '/users/': typeof AuthenticatedUsersIndexRoute
@@ -295,6 +303,7 @@ export interface FileRoutesByTo {
   '/content': typeof AuthenticatedContentIndexRoute
   '/help-center': typeof AuthenticatedHelpCenterIndexRoute
   '/settings': typeof AuthenticatedSettingsIndexRoute
+  '/system-anouncements': typeof AuthenticatedSystemAnouncementsIndexRoute
   '/tasks': typeof AuthenticatedTasksIndexRoute
   '/user-management': typeof AuthenticatedUserManagementIndexRoute
   '/users': typeof AuthenticatedUsersIndexRoute
@@ -333,6 +342,7 @@ export interface FileRoutesById {
   '/_authenticated/content/': typeof AuthenticatedContentIndexRoute
   '/_authenticated/help-center/': typeof AuthenticatedHelpCenterIndexRoute
   '/_authenticated/settings/': typeof AuthenticatedSettingsIndexRoute
+  '/_authenticated/system-anouncements/': typeof AuthenticatedSystemAnouncementsIndexRoute
   '/_authenticated/tasks/': typeof AuthenticatedTasksIndexRoute
   '/_authenticated/user-management/': typeof AuthenticatedUserManagementIndexRoute
   '/_authenticated/users/': typeof AuthenticatedUsersIndexRoute
@@ -369,6 +379,7 @@ export interface FileRouteTypes {
     | '/content/'
     | '/help-center/'
     | '/settings/'
+    | '/system-anouncements/'
     | '/tasks/'
     | '/user-management/'
     | '/users/'
@@ -402,6 +413,7 @@ export interface FileRouteTypes {
     | '/content'
     | '/help-center'
     | '/settings'
+    | '/system-anouncements'
     | '/tasks'
     | '/user-management'
     | '/users'
@@ -439,6 +451,7 @@ export interface FileRouteTypes {
     | '/_authenticated/content/'
     | '/_authenticated/help-center/'
     | '/_authenticated/settings/'
+    | '/_authenticated/system-anouncements/'
     | '/_authenticated/tasks/'
     | '/_authenticated/user-management/'
     | '/_authenticated/users/'
@@ -594,6 +607,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedTasksIndexRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/system-anouncements/': {
+      id: '/_authenticated/system-anouncements/'
+      path: '/system-anouncements'
+      fullPath: '/system-anouncements/'
+      preLoaderRoute: typeof AuthenticatedSystemAnouncementsIndexRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/settings/': {
       id: '/_authenticated/settings/'
       path: '/'
@@ -743,6 +763,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedChatsIndexRoute: typeof AuthenticatedChatsIndexRoute
   AuthenticatedContentIndexRoute: typeof AuthenticatedContentIndexRoute
   AuthenticatedHelpCenterIndexRoute: typeof AuthenticatedHelpCenterIndexRoute
+  AuthenticatedSystemAnouncementsIndexRoute: typeof AuthenticatedSystemAnouncementsIndexRoute
   AuthenticatedTasksIndexRoute: typeof AuthenticatedTasksIndexRoute
   AuthenticatedUserManagementIndexRoute: typeof AuthenticatedUserManagementIndexRoute
   AuthenticatedUsersIndexRoute: typeof AuthenticatedUsersIndexRoute
@@ -759,6 +780,8 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedChatsIndexRoute: AuthenticatedChatsIndexRoute,
   AuthenticatedContentIndexRoute: AuthenticatedContentIndexRoute,
   AuthenticatedHelpCenterIndexRoute: AuthenticatedHelpCenterIndexRoute,
+  AuthenticatedSystemAnouncementsIndexRoute:
+    AuthenticatedSystemAnouncementsIndexRoute,
   AuthenticatedTasksIndexRoute: AuthenticatedTasksIndexRoute,
   AuthenticatedUserManagementIndexRoute: AuthenticatedUserManagementIndexRoute,
   AuthenticatedUsersIndexRoute: AuthenticatedUsersIndexRoute,

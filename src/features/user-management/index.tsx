@@ -9,6 +9,7 @@ import {
 } from './components/user-management-provider'
 import { UserManagementTable } from './components/user-management-table'
 import { type UserProfile } from './data/schema'
+import { userProfiles } from './data/users'
 
 function UserManagementContent() {
   // ✅ Get search and navigate from router
@@ -20,7 +21,8 @@ function UserManagementContent() {
   // Option A: If you have it in state, use it here
   // Option B: If you fetch it, do it here
   // For now, using empty array as placeholder
-  const data: UserProfile[] = [] // ← Replace with your actual data source
+  // const data: UserProfile[] = [] // ← Replace with your actual data source
+  const data: UserProfile[] = userProfiles // ← Replace with your actual data source
 
   return (
     <div className='flex-1 space-y-4 p-8 pt-6'>

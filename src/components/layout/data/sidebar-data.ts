@@ -85,6 +85,13 @@ export const sidebarData: SidebarData = {
           icon: BarChart3,
           badge: 'new',
         },
+
+        {
+          title: 'Content', // <-- NEW ITEM
+          url: '/content',
+          icon: BarChart3,
+          badge: 'new',
+        },
         {
           title: 'Tasks',
           url: '/tasks',
