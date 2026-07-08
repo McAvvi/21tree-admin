@@ -23,6 +23,7 @@ import {
   GalleryVerticalEnd,
   DollarSign,
   CreditCard,
+  BarChart3,
 } from 'lucide-react'
 import { ClerkLogo } from '@/assets/clerk-logo'
 import { type SidebarData } from '../types'
@@ -70,6 +71,12 @@ export const sidebarData: SidebarData = {
           url: '/billing',
           icon: CreditCard, // Ensure you import CreditCard from 'lucide-react'
           badge: '$',
+        },
+        {
+          title: 'Analytics', // <-- NEW ITEM
+          url: '/analytics',
+          icon: BarChart3,
+          badge: 'new',
         },
         {
           title: 'Tasks',
